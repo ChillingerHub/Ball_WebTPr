@@ -1,0 +1,19 @@
+{
+    "name": "stefan/ball",
+    "description": "System mit dem man verschiedenste Arten von Bällen kaufen kann\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[aellen kaufen kann.",
+    "type": "library",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Stefan Hillinger",
+            "email": "stefan.hillinger@htl.rennweg.at"
+        }
+    ],
+    "autoload":
+    {
+        "psr-4":{
+            "stefan//ball//": "src/"
+        }
+    },
+    "require": {}
+}

@@ -6,13 +6,12 @@
  * Time: 16:21
  */
 
+require_once "vendor/autoload.php";
+
 use stefan\{
     ball, ball\fussball, ball\basketball, ball\golfball
 };
-include 'src/ball.php';
-include 'src/fussball.php';
-include 'src/basketball.php';
-include 'src/golfball.php';
+
 
 $ball_1_1 = new fussball("Stevens", 20, "Leder");
 $ball_1_2 = new fussball("Marksch", 20.3, "Plastik");
@@ -23,6 +22,7 @@ $ball_2_2 = new basketball("Wilshon", 33.5, "Plastik");
 $ball_3_1 = new ball\golfball("Klips", 4, "Plastik");
 $ball_3_2 = new ball\golfball("Knaber", 3.5, "Plastik");
 
+
 $ballarray = array(
     $ball_1_1,
     $ball_1_2,
@@ -32,6 +32,16 @@ $ballarray = array(
     $ball_3_2
 );
 
+$list = new ball\BallListing($ballarray);
+
+echo $list->listHtml();
+echo $list->listJson();
+echo $list->list();
+
+
+
+
+/*
 function renderHTML(\stefan\ball\ball $ball)
 {
     return $ball;
@@ -84,3 +94,4 @@ if (isset($_GET['format'])) {
         echo 'no format given';
     }
 }
+*/

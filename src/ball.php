@@ -27,7 +27,7 @@ abstract class ball
 
     public function __toString()
     {
-        return $this->name.' '.$this->durchmesser.' '.$this->material.' '.$this->getVolume();
+        return 'Name: '.$this->name.' Durchmesser: '.$this->durchmesser.' Material: '.$this->material.' Volumen'.$this->getVolume();
     }
 
 }

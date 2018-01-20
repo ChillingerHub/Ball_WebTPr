@@ -19,8 +19,8 @@ $ball_1_2 = new fussball("Marksch", 20.3, "Plastik");
 $ball_2_1 = new basketball("Wilshon", 31.5, "Leder");
 $ball_2_2 = new basketball("Wilshon", 33.5, "Plastik");
 
-$ball_3_1 = new ball\golfball("Klips", 4, "Plastik");
-$ball_3_2 = new ball\golfball("Knaber", 3.5, "Plastik");
+$ball_3_1 = new golfball("Klips", 4, "Plastik");
+$ball_3_2 = new golfball("Knaber", 3.5, "Plastik");
 
 
 $ballarray = array(

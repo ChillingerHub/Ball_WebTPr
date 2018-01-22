@@ -18,15 +18,16 @@ class BallListing
         $this->listing = $listing;
     }
 
+    function renderHTML(\stefan\ball\ball $ball)
+    {
+        return $ball;
+    }
+
     /**
      * @return array
      */
     public function listHtml()
     {
-        function renderHTML(\stefan\ball\ball $ball)
-        {
-            return $ball;
-        }
 
 
         if (isset($_GET['material'])) {
@@ -38,12 +39,12 @@ class BallListing
 
             echo "<ul>";
             foreach ($filtered as $ball)
-                echo "<li>" . renderHTML($ball) . "</li>";
+                echo "<li>" . $this->renderHTML($ball) . "</li>";
             echo "</ul>";
         } else {
             echo "<ul>";
             foreach ($this->listing as $ball)
-                echo "<li>" . renderHTML($ball) . "</li>";
+                echo "<li>" . $this->renderHTML($ball) . "</li>";
             echo "</ul>";
         }
 
@@ -51,10 +52,7 @@ class BallListing
 
     public function listJson()
     {
-        function renderJSON(\stefan\ball\ball $ball)
-        {
-            return json_encode($ball);
-        }
+
 
         //header("Content-Type: application/json");
         if (isset($_GET['material'])) {
@@ -83,12 +81,12 @@ class BallListing
 
                     echo "<ul>";
                     foreach ($filtered as $ball)
-                        echo "<li>" . renderHTML($ball) . "</li>";
+                        echo "<li>" . $this->renderHTML($ball) . "</li>";
                     echo "</ul>";
                 } else {
                     echo "<ul>";
                     foreach ($this->listing as $ball)
-                        echo "<li>" . renderHTML($ball) . "</li>";
+                        echo "<li>" . $this->renderHTML($ball) . "</li>";
                     echo "</ul>";
                 }
             }
